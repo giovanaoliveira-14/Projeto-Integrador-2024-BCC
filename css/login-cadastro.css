@@ -1,0 +1,235 @@
+/* MAIN */
+
+main {
+    width: 100%;
+}
+
+main .main-container {
+    width: 100%;
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+main .main-container .main-formulario-login,
+main .main-container .main-formulario-cadastro {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+main .main-container .main-formulario-login h3,
+main .main-container .main-formulario-cadastro h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.428;
+    text-align: center;
+}
+
+main .main-container .main-formulario-login > span,
+main .main-container .main-formulario-cadastro > span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-cinza-01);
+    text-align: center;
+}
+
+main .main-container .main-formulario-login .formulario-login,
+main .main-container .main-formulario-cadastro .formulario-cadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+main .main-container .main-formulario-login .formulario-login label,
+main .main-container .main-formulario-cadastro .formulario-cadastro label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .main-container .main-formulario-login .formulario-login label span,
+main .main-container .main-formulario-cadastro .formulario-cadastro label span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+main .main-container .main-formulario-login .formulario-login label span b,
+main .main-container .main-formulario-cadastro .formulario-cadastro label span b {
+    color: red;
+}
+
+main .main-container .main-formulario-login .formulario-login label input,
+main .main-container .main-formulario-cadastro .formulario-cadastro label input {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+main .main-container .main-formulario-login .formulario-login label input:focus {
+    outline: 1px solid var(--cor-primaria);
+}
+
+main .main-container .main-formulario-login .formulario-login input[type="submit"],
+main .main-container .main-formulario-cadastro .formulario-cadastro input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border: 1px solid var(--cor-primaria);
+    background: var(--cor-primaria);
+    transition: all 333ms ease-in-out;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+main .main-container .main-separador-customizado {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-container .main-separador-customizado .separador-linha {
+    min-height: 300px;
+    height: 100%;
+    width: 3px;
+    background-color: var(--cor-cinza);
+}
+
+main .main-container .main-separador-customizado i {
+    color: var(--cor-cinza);
+    font-size: 1.3rem;
+    margin: 10px;
+    transition: all 333ms ease-in-out;
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro > p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-cinza-01);
+    width: 100%;
+    word-wrap: break-word;
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 290px;
+    max-width: 300px;
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao label span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao label span b {
+    color: red;
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro label input,
+main .main-container .main-formulario-cadastro .formulario-cadastro label select {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+main .main-container .main-formulario-cadastro .formulario-cadastro label input:focus,
+main .main-container .main-formulario-cadastro .formulario-cadastro label select:focus {
+    outline: 1px solid var(--cor-primaria);
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1335px) {
+    main .main-container .main-separador-customizado .separador-linha {
+        min-height: 400px;
+    }
+}
+/* MOBILE */
+@media screen and (max-width: 991px) {
+    main .main-container {
+        flex-direction: column;
+    }
+    main .main-container .main-formulario-login,
+    main .main-container .main-formulario-cadastro {
+        max-width: 100%;
+    }
+    main .main-container .main-separador-customizado {
+        flex-direction: row;
+    }
+    main .main-container .main-separador-customizado .separador-linha {
+        min-height: 1px;
+        height: 3px;
+        width: 100%;
+        flex: 1;
+    }
+    main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao label {
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 300px) {
+    main .main-container .main-formulario-cadastro .formulario-cadastro .formulario-cadastro-localizacao label {
+        min-width: 250px;
+    }
+}
+/* HOVER */
+@media (hover: hover) {
+    main .main-container .main-separador-customizado i:hover {
+        color: var(--cor-primaria);
+    }
+    main .main-container .main-formulario-login .formulario-login input[type="submit"]:hover {
+        color: var(--cor-primaria);
+        background: #fff;
+        cursor: pointer;
+    }
+    main .main-container .main-formulario-cadastro .formulario-cadastro input[type="submit"]:hover {
+        color: var(--cor-primaria);
+        background: #fff;
+        cursor: pointer;
+    }
+}
+/* ANIMAÇÕES */
