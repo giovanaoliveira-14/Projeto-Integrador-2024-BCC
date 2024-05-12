@@ -1,3 +1,4 @@
+
 /* MAIN */
 main {
     width: 100%;
@@ -83,6 +84,7 @@ main .main-container .main-separador-customizado i {
     color: var(--cor-cinza);
     font-size: 1.3rem;
     margin: 10px;
+    transition: all 333ms ease-in-out;
 }
 
 main .main-container .main-projeto {
@@ -136,12 +138,6 @@ main .main-container .main-regua-palavras-chaves {
     max-width: 1390px;
     margin: 0 auto;
     padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    background: var(--cor-primaria);
-    border-radius: 8px;
 }
 
 main .main-container .main-regua-palavras-chaves .regua-palavras {
@@ -151,6 +147,9 @@ main .main-container .main-regua-palavras-chaves .regua-palavras {
     justify-content: space-between;
     padding: 10px;
     gap: 20px;
+    min-height: 80px;
+    background: var(--cor-primaria);
+    border-radius: 8px;
 }
 
 main .main-container .main-regua-palavras-chaves .regua-palavras h3 {
@@ -165,6 +164,7 @@ main .main-container .main-regua-palavras-chaves .regua-palavras .regua-palavras
     flex: 1;
     justify-content: space-evenly;
     margin: 0 0 0 20px;
+    gap: 10px;
 }
 
 main .main-container .main-regua-palavras-chaves .regua-palavras .regua-palavras-chaves-palavras li {
@@ -241,11 +241,15 @@ main .main-container .main-funcionalidades .funcionalidades-carrossel-item .func
 
 main .main-container .main-contato {
     width: 100%;
-    min-height: 324px;
+    min-height: 280px;
     background: var(--cor-primaria);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-main .main-container .main-contato .contato-conteudo {
+main .main-container .main-contato .main-contato-container {
     width: 100%;
     max-width: 1390px;
     margin: 0 auto;
@@ -253,20 +257,145 @@ main .main-container .main-contato .contato-conteudo {
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 100%;
+    justify-content: center;
+}
+
+main .main-container .main-contato .main-contato-container .contato-conteudo,
+main .main-container .main-contato .main-contato-container .contato-integrantes {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main .main-container .main-contato .main-contato-container .contato-conteudo h3,
+main .main-container .main-contato .main-contato-container .contato-integrantes h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.428;
+}
+
+main .main-container .main-contato .main-contato-container .contato-conteudo .contato-texto,
+main .main-container .main-contato .main-contato-container .contato-integrantes .contato-integrantes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .main-container .main-contato .main-contato-container .contato-conteudo .contato-texto p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    color: var(--cor-texto);
+}
+
+main .main-container .main-contato .main-contato-container .contato-integrantes {
+    align-items: center;
+}
+main .main-container .main-contato .main-contato-container .contato-integrantes .contato-integrantes-lista li a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: all 333ms ease-in-out;
 }
 
 /* DESKTOP */
 
 /* MOBILE */
-/* @media screen and (max-width: 991px) {
-    
-} */
+@media screen and (max-width: 991px) {
+    main .main-container .main-apresentacao {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main .main-container .main-apresentacao .apresentacao-texto h1 {
+        font-size: 2.1rem;
+    }
+    main .main-container .main-apresentacao .apresentacao-texto {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+    }
+    main .main-container .main-apresentacao .apresentacao-imagem {
+        max-width: 100%;
+        order: 1;
+    }
+    main .main-container .main-projeto {
+        max-width: 100%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    main .main-container .main-projeto .projeto-texto {
+        max-width: 100%;
+    }
+    main .main-container .main-projeto .projeto-imagem {
+        max-width: 100%;
+    }
+    main .main-container .main-regua-palavras-chaves .regua-palavras {
+        flex-direction: column;
+    }
+    main .main-container .main-regua-palavras-chaves .regua-palavras .regua-palavras-chaves-palavras {
+        width: 100%;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    main .main-container .main-contato .main-contato-container {
+        flex-direction: column;
+    }
+    main .main-container .main-projeto .projeto-texto h3 {
+        font-size: 1.8rem;
+    }
+    main .main-container .main-funcionalidades .funcionalidades-titulo {
+        font-size: 1.8rem;
+    }
+    main .main-container .main-contato .main-contato-container .contato-conteudo h3,
+    main .main-container .main-contato .main-contato-container .contato-integrantes h3 {
+        font-size: 1.8rem;
+    }
+    main .main-container .main-contato .main-contato-container .contato-conteudo,
+    main .main-container .main-contato .main-contato-container .contato-integrantes {
+        max-width: 100%;
+        text-align: center;
+    }
+    main .main-container .main-contato .main-contato-container .contato-integrantes .contato-integrantes-lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 /* HOVERS */
 @media (hover: hover) {
     main .main-container .main-apresentacao .apresentacao-texto a:hover {
         background: #fff;
         color: var(--cor-primaria);
+    }
+    main .main-container .main-separador-customizado i:hover {
+        color: var(--cor-primaria);
+    }
+    main
+        .main-container
+        .main-contato
+        .main-contato-container
+        .contato-integrantes
+        .contato-integrantes-lista
+        li
+        a:hover {
+        color: #fff;
     }
 }
 /* ANIMAÇÕES */

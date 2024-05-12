@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +38,7 @@ ul {
     --cor-alerta: #ff0000;
     --cor-atencao: #fabd0d;
     --cor-cinza: #e2e2e2;
+    --cor-cinza-01: #999
 }
 
 /* SCROLLBAR */
@@ -194,7 +196,6 @@ footer {
     justify-content: center;
     min-height: 80px;
     background: #000;
-    margin-top: auto;
 }
 
 footer .footer-container {
@@ -230,7 +231,7 @@ footer .footer-container span {
         height: 90%;
     }
     header .header-nav .header-menu-mobile {
-        display: none;
+        display: flex;
         position: absolute;
         right: 0;
         width: 0px;
@@ -243,6 +244,8 @@ footer .footer-container span {
         flex-direction: column;
         gap: 10px;
         visibility: hidden;
+        overflow-x: hidden;
+        transition: all .3s ease-in-out;
     }
     header .header-nav .header-menu-mobile .header-menu-mobile-title {
         width: 100%;
@@ -268,6 +271,8 @@ footer .footer-container span {
         background: #fff;
         border: 1px solid var(--cor-primaria);
         border-radius: 5px;
+        transition: all 333ms ease-in-out;
+       
     }
     header .header-nav .header-menu-mobile .header-menu-mobile-items {
         width: 100%;
@@ -325,6 +330,15 @@ footer .footer-container span {
         color: var(--cor-texto);
         font-size: 1rem;
     }
+    body:has(.header-menu-mobile.active){
+        overflow-y: hidden;
+    }
+    header .header-nav .header-menu-mobile.active{
+        visibility: visible;
+        width: 100vw;
+        transition: all 333ms ease-in-out;
+       
+    }
 }
 
 /* HOVERS */
@@ -361,5 +375,9 @@ footer .footer-container span {
         background: var(--cor-primaria);
         color: #fff;
         display: flex;
+    }
+    header .header-nav .header-menu-mobile .header-menu-mobile-title button:hover{
+        color: #fff;
+        background: var(--cor-primaria);
     }
 }
