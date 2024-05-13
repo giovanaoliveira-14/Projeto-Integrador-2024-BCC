@@ -1,44 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr" class="pagina-home">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estação Meteorológica | Home</title>
-    <link rel="icon" href="./img/logo/logo-emblema-icon.png" />
+    <link rel="icon" href="./img/logo/logo-emblema-icon.png">
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"
-    />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
     <!-- JS -->
-    <script
-      src="https://kit.fontawesome.com/026675cdf7.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/026675cdf7.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  </head>
-  <body>
-    <header></header>
+</head>
+<body>
+<header>
+    <nav class="header-nav">
+        <a href="./home.html" class="header-logo">
+            <img src="./img/logo/logo-emblema-icon.png" alt="Logo do projeto">
+        </a>
+        <div class="header-menu-options">
+            <ul class="header-menu">
+                <li class="header-menu-item"><a href="./home.html">Home</a></li>
+                <li class="header-menu-item"><a href="./previsoes-futuras.html">Previsões Futuras</a></li>
+                <li class="header-menu-item"><a href="./historico-climatico.html">Histórico Climático</a></li>
+                <li class="header-menu-item"><a href="./agenda-agricola.html">Agenda Agricola</a></li>
+            </ul>
+            <div class="header-usuario">
+                <div class="header-usuario-icone">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="header-usuario-bem-vindo">
+                    <strong>Olá, <span id="usuario-nome">Usuário</span></strong>
+                    <div class="header-usuario-link">
+                        <a href="./configuracoes.html">Perfil</a>
+                        <a href="#">Sair</a>
+                    </div>
+                </div>
+                <div class="header-usuario-configuracoes">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
 
-    <main></main>
+        <div class="header-menu-mobile-icone">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-    <footer>
-      <div class="footer-container">
-        <span
-          >Projeto Integrador 2024 - Estação Meteorológica para pequenos
-          agricultores</span
-        >
-      </div>
-    </footer>
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-title">
+                <span>Menu</span>
+                <button class="header-menu-mobile-fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                    Fechar
+                </button>
+            </div>
+            <div class="header-menu-mobile-items">
+                <ul class="header-menu">
+                    <li class="header-menu-item"><a href="./home.html">Home</a></li>
+                    <li class="header-menu-item"><a href="./previsoes-futuras.html">Previsões Futuras</a></li>
+                    <li class="header-menu-item"><a href="./historico-climatico.html">Histórico Climático</a></li>
+                    <li class="header-menu-item"><a href="./agenda-agricola.html">Agenda Agricola</a></li>
+                </ul>
+                <div class="header-usuario">
+                    <div class="header-usuario-icone">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="header-usuario-bem-vindo">
+                        <strong>Olá, <span id="usuario-nome">Usuário</span></strong>
+                        <div class="header-usuario-link">
+                            <a href="./configuracoes.html">Perfil</a>
+                            <a href="#">Sair</a>
+                        </div>
+                    </div>
+                    <div class="header-usuario-configuracoes">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 
-    <script src="./js/index.js"></script>
-  </body>
+<main>
+    <div class="main-container">
+        <section class="main-status-climatico">
+            <div class="status-climatico">
+                <div class="status-climatico-informacoes">
+                    <div class="informacoes-temperatura">
+                        <h3>21°</h3>
+                        <span>celsius</span>
+                    </div>
+                    <div class="informacoes-cidade">Marília, São Paulo - Brasil</div>
+                    <div class="informacoes-adicionais">
+                        <div class="informacoes-temperaturaMin">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <span>Temperatura Mínima:</span>
+                            <span id="temperaturaMin">XX° celsius</span>
+                        </div>
+                        <div class="informacoes-umidade">
+                            <i class="fa-solid fa-water"></i>
+                            <span>Umidade:</span>
+                            <span id="umidade">XX</span>
+                        </div>
+                        <div class="informacoes-chuva">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Captura de Chuva:</span>
+                            <span id="chuva">00 ml</span>
+                        </div>
+                        <div class="informacoes-luzUV">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>Índice de Luz UV:</span>
+                            <span id="luzUV">XX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-climatico-alertas">
+                    <i class="fa-brands fa-pagelines"></i>
+                    <p id="aviso-climatico">
+                        As condições climáticas estão boas para sua plantação! Mantenha
+                        seu cultivo sempre bem regado e adubado para gerar bons frutos!
+                    </p>
+                </div>
+            </div>
+            <div class="calendario-agricola">
+                <div class="calendario-agricola-data">
+                    <span>Dia:</span>
+                    <h3 id="data">21 de Abril de 2024</h3>
+                    <p id="periodo-agricola">
+                        Estamos na época de colheita/plantio de morango, mandioca e
+                        alface!
+                    </p>
+                    <p>Aproveite essa época para expandir o seu cultivo!</p>
+                </div>
+            </div>
+        </section>
+        <section class="main-dica-climatica">
+            <p class="dica-climatica-titulo">Dicas para a sua lavoura</p>
+            <p class="dica-climatica-texto">
+                Diversifique as culturas para reduzir o risco de perdas devido a
+                condições climáticas adversas ou pragas específicas.
+            </p>
+        </section>
+        <section class="main-sol-lua">
+            <div class="card-sol">
+                <i class="fa-regular fa-sun"></i>
+                <div class="card-sol-informacoes">
+                    <p>O sol nasceu às 06:35 de hoje!</p>
+                    <span>Duração do dia: 11h 27 minutos</span>
+                </div>
+            </div>
+            <div class="card-lua">
+                <i class="fa-regular fa-moon"></i>
+                <div class="card-lua-informacoes">
+                    <p>O nascer da lua será às 16:44</p>
+                    <span>A Lua está em sua fase cheia!</span>
+                </div>
+            </div>
+        </section>
+        <section class="main-precipitacao">
+            <h3 class="precipitacao-titulo">Precipitação</h3>
+            <div class="precipitacao-informacoes">
+                <div class="precipitacao-elemento">
+                    <div class="precipitacao-barra-progressiva">
+                        <div class="precipitacao-progresso"></div>
+                    </div>
+                    <span class="precipitacao-porcentagem"></span>
+                    <span class="precipitacao-data">Hoje</span>
+                </div>
+                <div class="precipitacao-elemento">
+                    <div class="precipitacao-barra-progressiva">
+                        <div class="precipitacao-progresso"></div>
+                    </div>
+                    <span class="precipitacao-porcentagem"></span>
+                    <span class="precipitacao-data">Amanhã</span>
+                </div>
+                <div class="precipitacao-elemento">
+                    <div class="precipitacao-barra-progressiva">
+                        <div class="precipitacao-progresso"></div>
+                    </div>
+                    <span class="precipitacao-porcentagem"></span>
+                    <span class="precipitacao-data">12/05</span>
+                </div>
+                <div class="precipitacao-elemento">
+                    <div class="precipitacao-barra-progressiva">
+                        <div class="precipitacao-progresso"></div>
+                    </div>
+                    <span class="precipitacao-porcentagem"></span>
+                    <span class="precipitacao-data">13/05</span>
+                </div>
+            </div>
+        </section>
+        <section class="main-recomendacoes">
+            <div class="recomendacao-semanal">
+                <span>Recomendação da Semana</span>
+                <p id="recomendacao-semanal-texto">
+                    O clima desta semana está ótimo para novos plantios!
+                    No entanto, com o clima mais úmido, esteja atento, pois
+                    pode ser um terreno fértil para pragas!
+                </p>
+                <figure class="recomendacao-semanal-figure">
+                    <img src="./img/Gardening-cuate.svg" alt="Ilustração de uma pessoa cuidando de suas plantas e flores">
+                </figure>
+            </div>
+            <div class="card-recomendacao">
+                <figure class="card-recomendacao-figure">
+                    <img src="./img/Blog-post-amico.svg" alt="Ilustração de um blog post">
+                </figure>
+                <p>
+                    Existem vários sites que oferecem uma variedade de dicas e recomendações úteis para ajudar pequenos agricultores. É altamente recomendável explorar esses recursos confiáveis, pois podem fornecer insights valiosos para aprimorar suas práticas agrícolas. Aqui está um site que recomendamos que você visite.
+                </p>
+                <a href="#">Visite o Site</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <span>Projeto Integrador 2024 - Estação Meteorológica para pequenos agricultores</span>
+    </div>
+</footer>
+
+<script src="./js/index.js"></script>
+</body>
 </html>

@@ -376,6 +376,10 @@ main .main-container .main-contato .main-contato-container .contato-integrantes 
         align-items: center;
         justify-content: center;
     }
+    main .main-container .main-regua-palavras-chaves .regua-palavras h3{
+        margin: 0;
+        text-align: center;
+    }
 }
 
 /* HOVERS */
