@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" class="pagina-home-principal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estação Meteorológica</title>
+    <link rel="icon" href="./img/logo/logo-emblema-icon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/026675cdf7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="header-nav">
+        <a href="./index.html" class="header-logo">
+          <img src="./img/logo/logo-emblema-icon.png" alt="Logo do projeto" />
+        </a>
+        <div class="header-menu-options">
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="#" aria-label="Ir para a página inicial">Home</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#sobre-projeto" aria-label="Sobre o projeto">Sobre</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#funcionalidades" aria-label="Ir para as funcionalidades"
+                >Funcionalidades</a
+              >
+            </li>
+            <li class="header-menu-item">
+              <a href="#contato" aria-label="Ir para a seção de contato"
+                >Contato</a
+              >
+            </li>
+            <li class="header-menu-item">
+              <a
+                href="./desenvolvedores.html"
+                aria-label="Ir para a página de desenvolvedores"
+                >Desenvolvedores</a
+              >
+            </li>
+          </ul>
+          <div class="header-login header-cadastro">
+            <div class="header-login-icone">
+              <i class="fa-solid fa-user" aria-label="Ícone de usuário"></i>
+            </div>
+            <div class="header-login-bem-vindo">
+              <strong>Bem-vindo(a) :)</strong>
+              <div class="header-login-link">
+                <a href="./login-cadastro.html">Entrar ou Cadastre-se!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-menu-mobile-icone">
+          <i class="fa-solid fa-bars" aria-label="Abrir menu"></i>
+        </div>
+
+        <div class="header-menu-mobile">
+          <div class="header-menu-mobile-title">
+            <span>Menu</span>
+            <button class="header-menu-mobile-fechar">
+              <i class="fa-solid fa-xmark" aria-label="Fechar menu"></i>
+              Fechar
+            </button>
+          </div>
+          <div class="header-menu-mobile-items">
+            <ul class="header-menu">
+              <li class="header-menu-item">
+                <a href="#" aria-label="Ir para a página inicial">Home</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="#sobre-projeto" aria-label="Sobre o projeto">Sobre</a>
+              </li>
+              <li class="header-menu-item">
+                <a
+                  href="#funcionalidades"
+                  aria-label="Ir para as funcionalidades"
+                  >Funcionalidades</a
+                >
+              </li>
+              <li class="header-menu-item">
+                <a href="#contato" aria-label="Ir para a seção de contato"
+                  >Contato</a
+                >
+              </li>
+              <li class="header-menu-item">
+                <a
+                  href="./desenvolvedores.html"
+                  aria-label="Ir para a página de desenvolvedores"
+                  >Desenvolvedores</a
+                >
+              </li>
+            </ul>
+            <div class="header-login header-cadastro">
+              <div class="header-login-icone">
+                <i class="fa-solid fa-user" aria-label="Ícone de usuário"></i>
+              </div>
+              <div class="header-login-bem-vindo">
+                <strong>Bem-vindo(a) :)</strong>
+                <div class="header-login-link">
+                  <a href="./login-cadastro.html">Entrar ou Cadastre-se!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <section class="main-apresentacao">
+          <div class="apresentacao-texto">
+            <h1>
+              Uma solução voltada para sua eficiência e produtividade no meio
+              rural através de dados climáticos!
+            </h1>
+            <a href="#sobre-projeto">Sobre o projeto</a>
+          </div>
+          <div class="apresentacao-imagem">
+            <img
+              src="./img/Weather-rafiki.svg"
+              alt="Ilustração de uma estação meteorológica"
+            />
+          </div>
+        </section>
+        <div class="main-separador-customizado">
+          <div class="separador-linha"></div>
+          <i class="fa-solid fa-cloud"></i>
+          <div class="separador-linha"></div>
+        </div>
+        <section class="main-projeto" id="sobre-projeto">
+          <div class="projeto-texto">
+            <h3>Sobre o projeto</h3>
+            <p>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria
+              tipográfica e de impressos, e vem sendo utilizado desde o século
+              XVI, quando um impressor desconhecido pegou uma bandeja de tipos e
+              os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+              sobreviveu não só a cinco séculos, como também ao salto para a
+              editoração eletrônica, permanecendo essencialmente inalterado. Se
+              popularizou na década de 1960, quando a Letraset lançou decalques
+              contendo passagens de Lorem Ipsum, e mais recentemente quando
+              passou a ser integrado a softwares de editoração eletrônica como
+              Aldus PageMaker.
+            </p>
+            <p>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria
+              tipográfica e de impressos, e vem sendo utilizado desde o século
+              XVI, quando um impressor desconhecido pegou uma bandeja de tipos e
+              os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+              sobreviveu não só a cinco séculos, como também ao salto para a
+              editoração eletrônica, permanecendo essencialmente inalterado. Se
+              popularizou na década de 1960, quando a Letraset lançou decalques
+              contendo passagens de Lorem Ipsum.
+            </p>
+          </div>
+          <div class="projeto-imagem">
+            <img
+              src="./img/coffee-farm-amico.svg"
+              alt="Ilustração de uma fazenda"
+            />
+          </div>
+        </section>
+        <div class="main-regua-palavras-chaves">
+          <div class="regua-palavras">
+            <h3 class="regua-palavras-chaves-titulo">
+              Palavras-chave do projeto:
+            </h3>
+            <ul class="regua-palavras-chaves-palavras">
+              <li class="regua-palavras-chaves-palavra">Tecnologia</li>
+              <li class="regua-palavras-chaves-palavra">Integração</li>
+              <li class="regua-palavras-chaves-palavra">Eficiência</li>
+              <li class="regua-palavras-chaves-palavra">Alcance</li>
+              <li class="regua-palavras-chaves-palavra">Acessível</li>
+            </ul>
+          </div>
+        </div>
+        <section class="main-funcionalidades" id="funcionalidades">
+          <h3 class="funcionalidades-titulo">Funcionalidades</h3>
+          <div class="funcionalidades-texto">
+            <p>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria
+              tipográfica e de impressos, e vem sendo utilizado desde o século
+              XVI, quando um impressor desconhecido pegou uma bandeja de tipos e
+              os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+              sobreviveu não só a cinco séculos, como também ao salto para a
+              editoração eletrônica, permanecendo essencialmente inalterado. Se
+              popularizou na década de 1960, quando a Letraset lançou decalques
+              contendo passagens de Lorem Ipsum, e mais recentemente com
+              softwares de editoração eletrônica como Aldus PageMaker incluindo
+              versões de Lorem Ipsum.
+            </p>
+          </div>
+          <div class="funcionalidades-carrossel">
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+            <div class="funcionalidades-carrossel-item">
+              <div class="funcionalidades-carrossel-item-imagem">
+                <img src="" alt="" />
+              </div>
+              <div class="funcionalidades-carrossel-item-texto">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-contato" id="contato">
+          <div class="main-contato-container">
+            <div class="contato-conteudo">
+              <h3>Contato</h3>
+              <div class="contato-texto">
+                <p>
+                  Para mais informações sobre o projeto, entre em contato com
+                  nossa equipe.
+                </p>
+                <p>
+                  Projeto desenvolvido para a disciplina de Fábrica de Projetos
+                  Ágeis do curso de Ciência da Computação da Universidade de
+                  Marília (UNIMAR).
+                </p>
+                <p>
+                  Este projeto foi desenvolvido exclusivamente para fins
+                  educacionais e para demonstrações em sala de aula. Salientamos
+                  que não deve conter dados reais.
+                </p>
+              </div>
+            </div>
+            <div class="contato-integrantes">
+              <h3>Integrantes</h3>
+              <ul class="contato-integrantes-lista">
+                <li class="contato-integrantes-item">
+                  <a href="#"><i class="fa-brands fa-github"></i> Giovana</a>
+                </li>
+                <li class="contato-integrantes-item">
+                  <a href="#"
+                    ><i class="fa-brands fa-github"></i> José Tranquilino</a
+                  >
+                </li>
+                <li class="contato-integrantes-item">
+                  <a href="#"
+                    ><i class="fa-brands fa-github"></i> Marcela Coneglian</a
+                  >
+                </li>
+                <li class="contato-integrantes-item">
+                  <a href="#"
+                    ><i class="fa-brands fa-github"></i> Letícia Pontes</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <span
+          >Projeto Integrador 2024 - Estação Meteorológica para pequenos
+          agricultores</span
+        >
+      </div>
+    </footer>
+
+    <script src="./js/slick.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -13,7 +13,7 @@ main .main-container {
 
 main .main-container .main-apresentacao {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -89,7 +89,7 @@ main .main-container .main-separador-customizado i {
 
 main .main-container .main-projeto {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -135,7 +135,7 @@ main .main-container .main-projeto .projeto-imagem img {
 
 main .main-container .main-regua-palavras-chaves {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -175,7 +175,7 @@ main .main-container .main-regua-palavras-chaves .regua-palavras .regua-palavras
 
 main .main-container .main-funcionalidades {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 10px;
     text-align: center;
@@ -251,7 +251,7 @@ main .main-container .main-contato {
 
 main .main-container .main-contato .main-contato-container {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 10px;
     display: flex;

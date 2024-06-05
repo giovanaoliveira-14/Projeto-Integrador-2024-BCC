@@ -6,9 +6,9 @@ main {
 
 main .main-container {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1360px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 80px 10px;
     display: flex;
     justify-content: center;
 }
@@ -193,6 +193,7 @@ main .main-container .main-formulario-cadastro .formulario-cadastro label select
 @media screen and (max-width: 991px) {
     main .main-container {
         flex-direction: column;
+        padding: 30px 10px;
     }
     main .main-container .main-formulario-login,
     main .main-container .main-formulario-cadastro {
