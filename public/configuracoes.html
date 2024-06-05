@@ -111,35 +111,43 @@
         <h1 class="configuracao-title">Configurações</h1>
         <div class="configuracao-container">
           <form class="configuracao-formulario">
-            <label for="nome-usuario">
-              <span>Nome</span>
-              <input type="text" name="nome-usuario" />
-            </label>
-            <label for="email-usuario">
-              <span>E-mail</span>
-              <input type="email" name="email-usuario" />
-            </label>
+            <div class="configuracao-formulario-linha">
+              <label for="nome-usuario">
+                <span>Nome</span>
+                <input type="text" name="nome-usuario" />
+              </label>
+              <label for="email-usuario">
+                <span>E-mail</span>
+                <input type="email" name="email-usuario" />
+              </label>
+            </div>
             <label for="senha-usuario">
               <span>Senha</span>
-              <input type="password" name="senha-usuario">
+              <input type="password" name="senha-usuario" />
             </label>
             <span>Sempre mantenha seu endereço ataualizado</span>
-            <label for="endereco-usuario">
-              <span>Endereço</span>
-              <input type="text" name="endereco-usuario">
-            </label>
-            <label for="bairro-usuario">
-              <span>Bairro</span>
-              <input type="text" name="bairro-usuario">
-            </label>
-            <label for="cidade-usuario">
-              <span>Cidade</span>
-              <input type="text" name="cidade-usuario">
-            </label>
-            <label for="estado-usuario">
-              <span>Estado</span>
-              <input type="text" name="estado-usuario">
-            </label>
+            <div class="configuracao-formulario-linha">
+              <label for="endereco-usuario">
+                <span>Endereço</span>
+                <input type="text" name="endereco-usuario" />
+              </label>
+              <label for="bairro-usuario">
+                <span>Bairro</span>
+                <input type="text" name="bairro-usuario" />
+              </label>
+            </div>
+
+            <div class="configuracao-formulario-linha">
+              <label for="cidade-usuario">
+                <span>Cidade</span>
+                <input type="text" name="cidade-usuario" />
+              </label>
+              <label for="estado-usuario">
+                <span>Estado</span>
+                <input type="text" name="estado-usuario" />
+              </label>
+            </div>
+
             <div class="configuracao-botoes">
               <input type="submit" value="Atualizar" />
               <button class="deletar-usuario">Deletar Conta</button>
