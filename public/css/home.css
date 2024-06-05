@@ -1,1 +1,132 @@
- 
+  main{
+    width: 100%;
+  }
+
+  .main-container{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+  }
+
+  .main-status-climatico{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 450px;
+    margin: 20px 0;
+  }
+
+  .status-climatico{
+    width: 100%;
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .status-climatico-informacoes{
+    width: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+    background: var(--cor-secundaria);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content:space-evenly;
+
+  }
+
+  .informacoes-temperatura{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .informacoes-temperatura h3{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .informacoes-temperatura span{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .informacoes-cidade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .informacoes-adicionais{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    height: 70px;
+  }
+
+  .informacoes-adicionais .informacoes{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .calendario-agricola{
+    width: 100%;
+    max-width: 620px;
+    min-height: 450px;
+    background: var(--cor-primaria);
+    padding: 20px;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .calendario-agricola h3{
+    font-size: 2.2rem;
+  }
+
+  .status-climatico-alertas{
+    width: 100%;
+    border-radius:10px;
+    background: var(--cor-primaria);
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .status-climatico-alertas p{
+    margin: 20px 0;
+  }
