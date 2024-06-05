@@ -10,20 +10,18 @@
     <link rel="stylesheet" href="./css/configuracoes.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
     <!-- JS -->
     <script
       src="https://kit.fontawesome.com/026675cdf7.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   </head>
   <body>
     <header>
@@ -108,16 +106,51 @@
 
     <main>
       <div class="main-container">
-        
+        <h1 class="configuracao-title">Configurações</h1>
+        <div class="configuracao-container">
+          <form class="configuracao-formulario">
+            <label for="nome-usuario">
+              <span>Nome</span>
+              <input type="text" name="nome-usuario" />
+            </label>
+            <label for="email-usuario">
+              <span>E-mail</span>
+              <input type="email" name="email-usuario" />
+            </label>
+            <label for="senha-usuario">
+              <span>Senha</span>
+              <input type="password" name="senha-usuario">
+            </label>
+            <span>Sempre mantenha seu endereço ataualizado</span>
+            <label for="endereco-usuario">
+              <span>Endereço</span>
+              <input type="text" name="endereco-usuario">
+            </label>
+            <label for="bairro-usuario">
+              <span>Bairro</span>
+              <input type="text" name="bairro-usuario">
+            </label>
+            <label for="cidade-usuario">
+              <span>Cidade</span>
+              <input type="text" name="cidade-usuario">
+            </label>
+            <label for="estado-usuario">
+              <span>Estado</span>
+              <input type="text" name="estado-usuario">
+            </label>
+            <div class="configuracao-botoes">
+              <input type="submit" value="Atualizar" />
+              <button class="deletar-usuario">Deletar Conta</button>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
 
     <footer>
       <div class="footer-container">
-        <span
-          >Projeto Integrador 2024 - Estação Meteorológica para pequenos
-          agricultores</span
-        >
+        <span>Projeto Integrador 2024 - Estação Meteorológica para pequenos
+          agricultores</span>
       </div>
     </footer>
 
