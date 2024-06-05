@@ -15,6 +15,9 @@ main {
     font-weight: 500;
     transition: all 333ms ease-in-out;
     margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .previsoes-futuras-subtitulo {
@@ -97,4 +100,34 @@ main {
 .previsoes-futuras-icone img {
     max-width: 110px;
     object-fit: contain;
+}
+/* MOBILE */
+@media screen and (max-width: 450px) {
+    .previcoes-futuras-conteudo {
+        grid-template-columns: 1fr;
+    }
+    .previsoes-futuras-card {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .previsoes-futuras-icone {
+        order: 1;
+        max-width: 100%;
+    }
+    .previsoes-futuras-informacoes {
+        order: 2;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* HOVER */
+@media (hover: hover) {
+    .previsoes-futuras-card:hover {
+        transform: scale(1.01);
+    }
 }
