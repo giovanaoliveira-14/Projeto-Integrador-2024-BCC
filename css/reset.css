@@ -188,6 +188,24 @@ header .header-nav .header-menu-mobile {
     display: none;
 }
 
+.header-usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-usuario .header-usuario-icone{
+    font-size: 24px;
+}
+
+.header-usuario  .header-usuario-bem-vindo{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-transform: capitalize; 
+}
+
 /* FOOTER */
 footer {
     width: 100%;
