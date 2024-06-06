@@ -15,3 +15,12 @@ $(document).ready(function () {
     });
   });
   
+
+  // FUNÇÕES GERAIS
+function logout() {
+  localStorage.removeItem("userLoggedIn");
+  localStorage.removeItem("userData");
+  setTimeout(function () {
+    window.location.href = "../index.html";
+  }, 500);
+}
