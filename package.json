@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "firebase": "^10.12.2"
+  },
+  "name": "projeto-integrador-2024-bcc",
+  "description": "Este projeto foi desenvolvido como parte da disciplina de Fábrica de Projetos Ágeis no curso de Ciência da Computação na UNIMAR. Este projeto consiste em desenvolver uma aplicação que fará parte de uma estação meteorológica desenvolvida para ser o projeto do semestre na matéria em questão.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
