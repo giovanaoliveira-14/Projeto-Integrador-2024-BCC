@@ -4,8 +4,8 @@ main {
 
 .main-container {
     width: 100%;
-    max-width: 1360px;
-    margin: 0 auto;
+    max-width:1206px;
+    margin: auto;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
