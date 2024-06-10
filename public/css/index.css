@@ -13,7 +13,7 @@ main .main-container {
 
 main .main-container .main-apresentacao {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1206px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -89,7 +89,7 @@ main .main-container .main-separador-customizado i {
 
 main .main-container .main-projeto {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1206px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -114,7 +114,6 @@ main .main-container .main-projeto .projeto-texto h3 {
 main .main-container .main-projeto .projeto-texto p {
     font-size: 1.1rem;
     font-weight: 400;
-    text-transform: capitalize;
     word-wrap: break-word;
 }
 
@@ -135,7 +134,7 @@ main .main-container .main-projeto .projeto-imagem img {
 
 main .main-container .main-regua-palavras-chaves {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1206px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -175,7 +174,7 @@ main .main-container .main-regua-palavras-chaves .regua-palavras .regua-palavras
 
 main .main-container .main-funcionalidades {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1206px;
     margin: 0 auto;
     padding: 0 10px;
     text-align: center;
@@ -199,7 +198,7 @@ main .main-container .main-funcionalidades .funcionalidades-texto {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    text-transform: capitalize;
+    margin: 30px 0;
 }
 main .main-container .main-funcionalidades .funcionalidades-carrossel {
     width: 100%;
@@ -251,7 +250,7 @@ main .main-container .main-contato {
 
 main .main-container .main-contato .main-contato-container {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1206px;
     margin: 0 auto;
     padding: 0 10px;
     display: flex;
@@ -286,7 +285,6 @@ main .main-container .main-contato .main-contato-container .contato-integrantes 
 main .main-container .main-contato .main-contato-container .contato-conteudo .contato-texto p {
     font-size: 1rem;
     font-weight: 400;
-    text-transform: capitalize;
     word-wrap: break-word;
     color: var(--cor-texto);
 }
@@ -297,7 +295,6 @@ main .main-container .main-contato .main-contato-container .contato-integrantes 
 main .main-container .main-contato .main-contato-container .contato-integrantes .contato-integrantes-lista li a {
     font-size: 1rem;
     font-weight: 400;
-    text-transform: capitalize;
     word-wrap: break-word;
     color: var(--cor-texto);
     display: flex;
