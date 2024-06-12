@@ -94,7 +94,7 @@ main {
     justify-content: space-between;
 }
 
-.configuracao-botoes input[type="submit"] {
+.configuracao-botoes .atualizar-usuario {
     width: 100%;
     max-width: 268px;
     height: 45px;
@@ -139,15 +139,16 @@ main {
         gap: 24px;
     }
     .configuracao-botoes .deletar-usuario,
-    .configuracao-botoes input[type="submit"],
+    .configuracao-botoes .atualizar-usuario,
     .configuracao-formulario label {
         max-width: 100%;
     }
 }
 /* HOVER */
 @media (hover: hover) {
-    .configuracao-botoes input[type="submit"]:hover {
+    .configuracao-botoes .atualizar-usuario:hover {
         background: #fff;
+        cursor: pointer;
         color: var(--cor-primaria);
     }
     .configuracao-botoes .deletar-usuario:hover {

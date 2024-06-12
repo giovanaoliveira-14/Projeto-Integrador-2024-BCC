@@ -88,8 +88,8 @@ main .main-container .main-formulario-login .formulario-login label input:focus 
     outline: 1px solid var(--cor-primaria);
 }
 
-main .main-container .main-formulario-login .formulario-login input[type="submit"],
-main .main-container .main-formulario-cadastro .formulario-cadastro input[type="submit"] {
+main .main-container .main-formulario-login .formulario-login button,
+main .main-container .main-formulario-cadastro .formulario-cadastro button {
     width: 100%;
     height: 45px;
     padding: 10px;
@@ -222,12 +222,12 @@ main .main-container .main-formulario-cadastro .formulario-cadastro label select
     main .main-container .main-separador-customizado i:hover {
         color: var(--cor-primaria);
     }
-    main .main-container .main-formulario-login .formulario-login input[type="submit"]:hover {
+    main .main-container .main-formulario-login .formulario-login button:hover {
         color: var(--cor-primaria);
         background: #fff;
         cursor: pointer;
     }
-    main .main-container .main-formulario-cadastro .formulario-cadastro input[type="submit"]:hover {
+    main .main-container .main-formulario-cadastro .formulario-cadastro button:hover {
         color: var(--cor-primaria);
         background: #fff;
         cursor: pointer;
