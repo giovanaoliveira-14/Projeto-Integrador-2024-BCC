@@ -47,7 +47,6 @@
             <li class="header-menu-item">
               <a href="./index.html#contato">Contato</a>
             </li>
-           
           </ul>
           <div class="header-login header-cadastro">
             <div class="header-login-icone">
@@ -86,7 +85,6 @@
               <li class="header-menu-item">
                 <a href="./index.html#contato">Contato</a>
               </li>
-              
             </ul>
             <div class="header-login header-cadastro">
               <div class="header-login-icone">
@@ -109,7 +107,7 @@
         <section class="main-formulario-login">
           <h3>Entrar</h3>
           <span>Se caso você possuir conta, faça o login</span>
-          <form action="#" class="formulario-login">
+          <form class="formulario-login">
             <label for="email-usuario">
               <span>E-mail <b>*</b></span>
               <input
@@ -128,7 +126,7 @@
                 required
               />
             </label>
-            <input type="submit" value="Entrar" />
+            <button id="button-login">Entrar</button>
           </form>
         </section>
         <div class="main-separador-customizado">
@@ -142,7 +140,7 @@
             >Não possui uma conta? Crie uma agora e tenha controle das
             informações climáticas com maior eficiência!</span
           >
-          <form action="#" class="formulario-cadastro">
+          <form class="formulario-cadastro">
             <label for="cadastro-nome">
               <span>Nome <b>*</b></span>
               <input
@@ -172,7 +170,7 @@
             </label>
             <p>
               Informe a sua localização para trazermos dados precisos de sua
-              região (opicional)
+              região (obrigatorio)
             </p>
             <div class="formulario-cadastro-localizacao">
               <label for="cadastro-endereco">
@@ -201,7 +199,7 @@
               </label>
               <label for="cadastro-esdado">
                 <span>Estado</span>
-                <select id="formulario-cadastro-estados">
+                <select id="cadastro-estados">
                   <option value="Acre">Acre</option>
                   <option value="Alagoas">Alagoas</option>
                   <option value="Amapá">Amapá</option>
@@ -234,7 +232,7 @@
                 </select>
               </label>
             </div>
-            <input type="submit" value="Cadastrar-se" />
+            <button id="cadastro-button">Cadastrar-se</button>
           </form>
         </div>
       </div>
@@ -250,6 +248,7 @@
     </footer>
 
     <script src="./js/index.js"></script>
+
     <script src="./js/login.js"></script>
   </body>
 </html>
