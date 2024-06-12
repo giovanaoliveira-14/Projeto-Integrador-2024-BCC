@@ -1,3 +1,5 @@
+import { tabelaUmidadeTemperatura, tabelaUVChuva } from './base/base-dados.js';
+
 if (localStorage.getItem("userLoggedIn") === "true") {
   const firebaseConfig = {
     apiKey: "AIzaSyAQNunOvOyP6Z3hShU3BV8KazyNwEjd_0c",
@@ -49,6 +51,7 @@ if (localStorage.getItem("userLoggedIn") === "true") {
             const lastEntryKey = Object.keys(data)[0];
             const lastEntryData = data[lastEntryKey];
             console.log("Último registro:", lastEntryData);
+            getSugestaoPlantio(lastEntryData);
           } else {
             console.log("Nenhum dado encontrado no nó Plantio.");
           }
@@ -58,6 +61,65 @@ if (localStorage.getItem("userLoggedIn") === "true") {
         });
     }
 
+    // Função para obter sugestão de plantio com base na umidade e temperatura ou UV e chuva
+    function getSugestaoPlantio(tipo, leituraUmidade, leituraTemperaturaOuChuva) {
+      let tabela;
+      let faixaTipo;
+      let faixaTemperaturaChuva;
+    
+      if (tipo === 'umidade') {
+        tabela = tabelaUmidadeTemperatura.umidade;
+        faixaTipo = 'temperatura'; // Para umidade, procuramos na faixa de temperatura
+      } else if (tipo === 'uv') {
+        tabela = tabelaUVChuva.uv;
+        faixaTipo = 'chuva'; // Para UV, procuramos na faixa de chuva
+      } else {
+        return { aviso: '', dica: '' }; // Retorna vazio se tipo não for reconhecido
+      }
+    
+      // Encontra a faixa de umidade ou UV
+      let faixa;
+      if (tipo === 'umidade') {
+        // Encontra a faixa de umidade baseada em números
+        faixa = Object.keys(tabela).find(faixa => {
+          let [min, max] = faixa.split('-').map(Number);
+          return leituraUmidade >= min && leituraUmidade <= max;
+        });
+      } else if (tipo === 'uv') {
+        // Encontra a faixa de UV baseada em strings
+        faixa = Object.keys(tabela).find(faixa => {
+          return leituraUmidade === faixa; // Comparação direta da leitura de UV com a faixa atual
+        });
+      }
+    
+      if (!faixa) {
+        return { aviso: '', dica: '' }; // Retorna vazio se não encontrar faixa adequada
+      }
+    
+      // Encontra a faixa de temperatura ou chuva dentro da faixa de umidade ou UV encontrada
+      faixaTemperaturaChuva = Object.keys(tabela[faixa][faixaTipo]).find(faixaTC => {
+        let [min, max] = faixaTC.split('-').map(Number);
+        if (faixaTipo === 'chuva') {
+          // Tratamento especial para a tabelaUVChuva, onde as faixas são strings
+          return faixaTC === leituraTemperaturaOuChuva;
+        } else {
+          // Para tabelaUmidadeTemperatura, faixas baseadas em números
+          return leituraTemperaturaOuChuva >= min && leituraTemperaturaOuChuva <= max;
+        }
+      });
+    
+      if (!faixaTemperaturaChuva) {
+        return { aviso: '', dica: '' }; // Retorna vazio se não encontrar faixa de temperatura ou chuva adequada
+      }
+    
+      // Retorna o aviso e dica correspondentes à faixa de umidade/UV e temperatura/chuva
+      return {
+        aviso: tabela[faixa][faixaTipo][faixaTemperaturaChuva].Aviso,
+        dica: tabela[faixa][faixaTipo][faixaTemperaturaChuva].Dica
+      };
+    }
+    
+  
     getLastPlantioData();
 
       const leiturasRef = firebase
@@ -65,25 +127,65 @@ if (localStorage.getItem("userLoggedIn") === "true") {
       .ref("Usuario/" + userID + "/leituras");
 
     leiturasRef.on("value", (snapshot) => {
+
       const leitura = snapshot.val();
-      console.log("leitura: ",leitura)
+      console.log("leitura: ", leitura);
+  
       for (const leituraData in leitura) {
         const leituraAtual = leitura[leituraData];
         const dataFormat = new Date(currYear, currMonth, diaAtual);
         const atualData = formatDate(dataFormat);
+
         if (leituraData === atualData) {
           const leituraUv = leituraAtual.UV;
-          const chuva = leituraAtual.pressao;
+          const chuva = leituraAtual.chuva;
           const temperatura = leituraAtual.temperaturaAtual;
           const umidade = leituraAtual.umidade;
-          // const leituraWatts = leituraAtual.Watts;
+
           $(".informacoes-temperatura h3").text("" + temperatura+"°");
           $("#umidade").text("" + umidade);
           $("#chuva").text(chuva);
           $("#luzUV").text(leituraUv);
+
+          // Obtém a sugestão de plantio e exibe na tabela
+          const avisoUxT = getSugestaoPlantio('umidade', umidade, temperatura);
+          const dicaUxT = getSugestaoPlantio('umidade', umidade, temperatura);
+
+          const avisoUVxC = getSugestaoPlantio('uv', leituraUv, chuva);
+          const dicaUVxC = getSugestaoPlantio('uv', leituraUv, chuva);
+          
+          $("#aviso-climatico").html(avisoUxT.aviso + '<br><br>' + avisoUVxC.aviso);
+          $("#dica-climatica-texto").html(dicaUxT.dica + '<br><br>' + dicaUVxC.dica);
         }
       }
     });
+
+    // leiturasRef.on("value", (snapshot) => {
+      
+    //   const leitura = snapshot.val();
+      
+    //   console.log("leitura: ",leitura)
+      
+    //   for (const leituraData in leitura) {
+        
+    //     const leituraAtual = leitura[leituraData];
+    //     const dataFormat = new Date(currYear, currMonth, diaAtual);
+    //     const atualData = formatDate(dataFormat);
+        
+    //     if (leituraData === atualData) {
+          
+    //       const leituraUv = leituraAtual.UV;
+    //       const chuva = leituraAtual.pressao;
+    //       const temperatura = leituraAtual.temperaturaAtual;
+    //       const umidade = leituraAtual.umidade;
+
+    //       $(".informacoes-temperatura h3").text("" + temperatura+"°");
+    //       $("#umidade").text("" + umidade);
+    //       $("#chuva").text(chuva);
+    //       $("#luzUV").text(leituraUv);
+    //     }
+    //   }
+    // });
 
     // FORMATAR DATA
     function formatDate(date) {
