@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +37,7 @@ ul {
     --cor-alerta: #ff0000;
     --cor-atencao: #fabd0d;
     --cor-cinza: #e2e2e2;
-    --cor-cinza-01: #999
+    --cor-cinza-01: #999;
 }
 
 /* SCROLLBAR */
@@ -188,24 +187,64 @@ header .header-nav .header-menu-mobile {
     display: none;
 }
 
-.header-usuario{
+.header-usuario {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 
-.header-usuario .header-usuario-icone{
+.header-usuario .header-usuario-icone {
     font-size: 24px;
 }
 
-.header-usuario  .header-usuario-bem-vindo{
+.header-usuario .header-usuario-bem-vindo {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
+.header-usuario-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-usuario-link a {
+    color: var(--cor-texto);
+    font-size: 1rem;
+    position: relative;
+}
+
+.header-usuario-link a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    transition: all 333ms ease-in-out;
+}
+
+.header-usuario-link button {
+    border: none;
+    background: transparent;
+    position: relative;
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+.header-usuario-link button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: all 333ms ease-in-out;
+}
 
 /* FOOTER */
 footer {
@@ -264,7 +303,7 @@ footer .footer-container span {
         gap: 10px;
         visibility: hidden;
         overflow-x: hidden;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
     header .header-nav .header-menu-mobile .header-menu-mobile-title {
         width: 100%;
@@ -291,7 +330,6 @@ footer .footer-container span {
         border: 1px solid var(--cor-primaria);
         border-radius: 5px;
         transition: all 333ms ease-in-out;
-       
     }
     header .header-nav .header-menu-mobile .header-menu-mobile-items {
         width: 100%;
@@ -349,14 +387,13 @@ footer .footer-container span {
         color: var(--cor-texto);
         font-size: 1rem;
     }
-    body:has(.header-menu-mobile.active){
+    body:has(.header-menu-mobile.active) {
         overflow-y: hidden;
     }
-    header .header-nav .header-menu-mobile.active{
+    header .header-nav .header-menu-mobile.active {
         visibility: visible;
         width: 100vw;
         transition: all 333ms ease-in-out;
-       
     }
 }
 
@@ -373,6 +410,18 @@ footer .footer-container span {
     }
     header .header-nav .header-menu-options .header-login .header-login-bem-vindo .header-login-link a:hover {
         color: var(--cor-primaria);
+    }
+    .header-usuario-link a:hover:after {
+        width: 100%;
+        color: var(--cor-primaria);
+    }
+    .header-usuario-link button:hover {
+        color: red;
+        cursor: pointer;
+    }
+    .header-usuario-link button:hover:after {
+        width: 100%;
+        color: red;
     }
     header .header-nav .header-menu-options .header-login .header-login-bem-vindo .header-login-link a:hover:after {
         width: 100%;
@@ -395,7 +444,7 @@ footer .footer-container span {
         color: #fff;
         display: flex;
     }
-    header .header-nav .header-menu-mobile .header-menu-mobile-title button:hover{
+    header .header-nav .header-menu-mobile .header-menu-mobile-title button:hover {
         color: #fff;
         background: var(--cor-primaria);
     }
