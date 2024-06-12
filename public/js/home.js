@@ -60,26 +60,30 @@ if (localStorage.getItem("userLoggedIn") === "true") {
 
     getLastPlantioData();
 
-    //   const leiturasRef = firebase
-    //   .database()
-    //   .ref("Usuario/" + userID + "/leituras");
+      const leiturasRef = firebase
+      .database()
+      .ref("Usuario/" + userID + "/leituras");
 
-    // leiturasRef.on("value", (snapshot) => {
-    //   const leitura = snapshot.val();
-    //   for (const leituraData in leitura) {
-    //     const leituraAtual = leitura[leituraData];
-    //     const dataFormat = new Date(currYear, currMonth, diaAtual);
-    //     const atualData = formatDate(dataFormat);
-    //     if (leituraData === atualData) {
-    //       const leituraAmpere = leituraAtual.Ampere;
-    //       const leituraVolts = leituraAtual.Volts;
-    //       const leituraWatts = leituraAtual.Watts;
-    //       $("#voltsData").text("" + leituraVolts + " Volts(V)");
-    //       $("#amperesData").text("" + leituraAmpere + " Ampere(A)");
-    //       $("#wattsData").text("" + leituraWatts + " Watts(W)");
-    //     }
-    //   }
-    // });
+    leiturasRef.on("value", (snapshot) => {
+      const leitura = snapshot.val();
+      console.log("leitura: ",leitura)
+      for (const leituraData in leitura) {
+        const leituraAtual = leitura[leituraData];
+        const dataFormat = new Date(currYear, currMonth, diaAtual);
+        const atualData = formatDate(dataFormat);
+        if (leituraData === atualData) {
+          const leituraUv = leituraAtual.UV;
+          const chuva = leituraAtual.pressao;
+          const temperatura = leituraAtual.temperaturaAtual;
+          const umidade = leituraAtual.umidade;
+          // const leituraWatts = leituraAtual.Watts;
+          $(".informacoes-temperatura h3").text("" + temperatura+"°");
+          $("#umidade").text("" + umidade);
+          $("#chuva").text(chuva);
+          $("#luzUV").text(leituraUv);
+        }
+      }
+    });
 
     // FORMATAR DATA
     function formatDate(date) {
