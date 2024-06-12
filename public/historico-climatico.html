@@ -53,12 +53,10 @@
               <strong>Olá,<span id="usuario-nome">Usuário</span></strong>
               <div class="header-usuario-link">
                 <a href="./configuracoes.html">Perfil</a>
-                <a href="#">Sair</a>
+                <button class="button-sair" onclick="logout()">Sair</button>
               </div>
             </div>
-            <div class="header-usuario-configuracoes">
-              <i class="fa-solid fa-gear"></i>
-            </div>
+          
           </div>
         </div>
 
@@ -92,11 +90,8 @@
                 <strong>Olá,<span id="usuario-nome">Usuário</span></strong>
                 <div class="header-usuario-link">
                   <a href="./configuracoes.html">Perfil</a>
-                  <a href="#">Sair</a>
+                  <button class="button-sair" onclick="logout()">Sair</button>
                 </div>
-              </div>
-              <div class="header-usuario-configuracoes">
-                <i class="fa-solid fa-gear"></i>
               </div>
             </div>
           </div>
@@ -112,198 +107,8 @@
           sua estação meteorológica
         </span>
         <div class="historico-container">
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
-          <div class="historico-card">
-            <strong class="historico-data">21/04/2024</strong>
-            <div class="historico-icone">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="historico-infos">
-              <span class="historico-temperaturaMax"
-                >Temperatura máxima: 32° C</span
-              >
-              <span class="historico-temperaturaMin"
-                >Temperatura minima: 21° C</span
-              >
-              <span class="historico-umidade">Umidade (média): XX</span>
-              <span class="historico-radiacao">Radiação Sola(máximo): XX </span>
-            </div>
-          </div>
+       
+          
         </div>
       </div>
     </main>
@@ -318,5 +123,6 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script src="./js/historico.js"></script>
   </body>
 </html>
